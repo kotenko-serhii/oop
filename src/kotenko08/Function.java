@@ -15,7 +15,7 @@ public class Function {
 	public static String enter_station_name() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите название станции: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ СЃС‚Р°РЅС†РёРё: ");
 		String station_name = in.nextLine();
 		return station_name;
 	}
@@ -23,7 +23,7 @@ public class Function {
 	public static String enter_arrival_time() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите время прибытия: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ: ");
 		String arrival_time = in.nextLine();
 		return arrival_time;
 	}
@@ -31,7 +31,7 @@ public class Function {
 	public static String enter_departure_time() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите время отправления: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: ");
 		String departure_time = in.nextLine();
 		return departure_time;
 	}
@@ -39,7 +39,7 @@ public class Function {
 	public static int enter_the_total_number_of_seats() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите общее количество мест: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РѕР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРµСЃС‚: ");
 		int the_total_number_of_seats = in.nextInt();
 		return the_total_number_of_seats;
 	}
@@ -47,7 +47,7 @@ public class Function {
 	public static String enter_days() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите день недели: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РґРµРЅСЊ РЅРµРґРµР»Рё: ");
 		String days = in.nextLine();
 		return days;
 	}
@@ -55,7 +55,7 @@ public class Function {
 	public static int enter_number() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите номер рейса: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЂРµР№СЃР°: ");
 		int number = in.nextInt();
 		return number;
 	}
@@ -63,7 +63,7 @@ public class Function {
 	public static int enter_number_of_seats_available() {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		System.out.print("Введите количество свободных мест: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚: ");
 		int number_of_seats_available = in.nextInt();
 		return number_of_seats_available;
 	}
