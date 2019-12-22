@@ -39,18 +39,18 @@ public class Main08 {
                 		for(int i = 0; i < ticket.size();i++) {
                 			
                 		for(int j = 0 ; j < ticket.get(i).getStations().size() ; j++) {
-							System.out.println("Название станции: " + ticket.get(i).getStations().get(j).get_station_name() + '\n'
-						+ "Время прибытия: " + ticket.get(i).getStations().get(j).get_arrival_time());
+							System.out.println("РќР°Р·РІР°РЅРёРµ СЃС‚Р°РЅС†РёРё: " + ticket.get(i).getStations().get(j).get_station_name() + '\n'
+						+ "Р’СЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ: " + ticket.get(i).getStations().get(j).get_arrival_time());
 						}
                 		
-                	   System.out.println("Время отправки: " + ticket.get(i).get_departure_time() + "\n" +
-                		"Кол-во свободных мест: " + ticket.get(i).get_number_of_seats_available() + "\n" +
-                		"Кол-во мест всего: " + ticket.get(i).get_the_total_number_of_seats() + "\n" +
-                		"День недели(отправки): " + ticket.get(i).get_days() + "\n" +
-                		"Номер рейса: " + ticket.get(i).get_number() + "\n");
+                	   System.out.println("Р’СЂРµРјСЏ РѕС‚РїСЂР°РІРєРё: " + ticket.get(i).get_departure_time() + "\n" +
+                		"РљРѕР»-РІРѕ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚: " + ticket.get(i).get_number_of_seats_available() + "\n" +
+                		"РљРѕР»-РІРѕ РјРµСЃС‚ РІСЃРµРіРѕ: " + ticket.get(i).get_the_total_number_of_seats() + "\n" +
+                		"Р”РµРЅСЊ РЅРµРґРµР»Рё(РѕС‚РїСЂР°РІРєРё): " + ticket.get(i).get_days() + "\n" +
+                		"РќРѕРјРµСЂ СЂРµР№СЃР°: " + ticket.get(i).get_number() + "\n");
                 		}
                 	} else {
-                	    System.out.println("Маршруты отсутсвуют!");
+                	    System.out.println("РњР°СЂС€СЂСѓС‚С‹ РѕС‚СЃСѓС‚СЃРІСѓСЋС‚!");
                 	}
                         break;
     			}	
@@ -63,14 +63,14 @@ public class Main08 {
     			case 4:{
     				String xml = ""; 
     	               int z = 0;
-    	               System.out.println("1. Сохранить базу данных");
-    	               System.out.println("2. Восстановить базу данных");
-    	               String path = "C:\\Users\\Сергей\\eclipse-workspace\\kotenko-serhii";
+    	               System.out.println("1. РЎРѕС…СЂР°РЅРёС‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…");
+    	               System.out.println("2. Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…");
+    	               String path = "C:\\Users\\РЎРµСЂРіРµР№\\eclipse-workspace\\kotenko-serhii";
     	               xml = in.next();     
     	                 try {
     	                     z = Integer.parseInt(xml);
     	                 } catch (NumberFormatException e){
-    	                     System.out.println("Неверный формат данных");
+    	                     System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…");
     	                 }
     	                 switch(z) {
     	                 
@@ -78,16 +78,16 @@ public class Main08 {
     	                   String find = "";
     	                   int k = 0;
     	                   while(!"0".equals(find)) {
-    	                        System.out.println("Текущий путь: " + path);
-    	                        System.out.println("1. Продолжить выбор файла");
-    	                        System.out.println("2. Создать файл в текущей директории");
-    	                        System.out.println("3. На директорию выше");
-    	                        System.out.println("0. Выход");
+    	                        System.out.println("РўРµРєСѓС‰РёР№ РїСѓС‚СЊ: " + path);
+    	                        System.out.println("1. РџСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹Р±РѕСЂ С„Р°Р№Р»Р°");
+    	                        System.out.println("2. РЎРѕР·РґР°С‚СЊ С„Р°Р№Р» РІ С‚РµРєСѓС‰РµР№ РґРёСЂРµРєС‚РѕСЂРёРё");
+    	                        System.out.println("3. РќР° РґРёСЂРµРєС‚РѕСЂРёСЋ РІС‹С€Рµ");
+    	                        System.out.println("0. Р’С‹С…РѕРґ");
     	                        find = in.next();
     	                     try {
     	                         k = Integer.parseInt(find);
     	                     } catch (NumberFormatException e){
-    	                         System.out.println("Неверный формат данных");
+    	                         System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…");
     	                     }
     	                     
     	                     switch(k) {
@@ -109,8 +109,8 @@ public class Main08 {
     	                     try {
     	                   Function.LongTermPersistenceWrite(ticket,path);
     	                     } catch (FileNotFoundException e) {
-    	                       System.out.println("Нет такого файла");
-    	                       System.out.println("Нажмите любую клавишу для продолжения...");
+    	                       System.out.println("РќРµС‚ С‚Р°РєРѕРіРѕ С„Р°Р№Р»Р°");
+    	                       System.out.println("РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ...");
     	                       new java.util.Scanner(System.in).nextLine();
     	                     }
     	                   break;
@@ -120,15 +120,15 @@ public class Main08 {
     	                   String find2 = "";
     	                   int k2= 0;
     	                   while(!"0".equals(find2)) {
-    	                     System.out.println("Текущий путь: " + path);
- 	                        System.out.println("1. Продолжить выбор файла");
- 	                        System.out.println("2. На директорию выше");
- 	                        System.out.println("0. Выход");
+    	                     System.out.println("РўРµРєСѓС‰РёР№ РїСѓС‚СЊ: " + path);
+ 	                        System.out.println("1. РџСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹Р±РѕСЂ С„Р°Р№Р»Р°");
+ 	                        System.out.println("2. РќР° РґРёСЂРµРєС‚РѕСЂРёСЋ РІС‹С€Рµ");
+ 	                        System.out.println("0. Р’С‹С…РѕРґ");
     	                     find2 = in.next();
     	                     try {
     	                         k2 = Integer.parseInt(find2);
     	                     } catch (NumberFormatException e){
-    	                         System.out.println("Неверный формат данных");
+    	                         System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…");
     	                     }
     	                     
     	                     switch(k2) {
@@ -146,8 +146,8 @@ public class Main08 {
     	                   try {
     	                     ticket = Function.LongTermPersistenceRead(path);
     	                       } catch (FileNotFoundException e) {
-    	                         System.out.println("Нет такого файла");
-    	                         System.out.println("Нажмите любую клавишу для продолжения...");
+    	                         System.out.println("РќРµС‚ С‚Р°РєРѕРіРѕ С„Р°Р№Р»Р°");
+    	                         System.out.println("РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ...");
     	                         new java.util.Scanner(System.in).nextLine();
     	                       }
     	                   
@@ -168,9 +168,9 @@ public class Main08 {
 		Ticket_office temp = new Ticket_office();
 		Station tempp = null;
 		ArrayList<Station>tmp = new ArrayList<Station>();
-		System.out.println("Выберите опцию: " 
-				+ '\n' + "1 - Добавить название станции и время прибытия" 
-				+ '\n' + "0 - Выход");
+		System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РѕРїС†РёСЋ: " 
+				+ '\n' + "1 - Р”РѕР±Р°РІРёС‚СЊ РЅР°Р·РІР°РЅРёРµ СЃС‚Р°РЅС†РёРё Рё РІСЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ" 
+				+ '\n' + "0 - Р’С‹С…РѕРґ");
 		String add = "";
 		int y = 0;
 		for(int i = 0; i < size; i++) {
@@ -179,7 +179,7 @@ public class Main08 {
               try {
                    y = Integer.parseInt(add);
               } catch (NumberFormatException e){
-                  System.out.println("Неверный формат данных");
+                  System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…");
               }
               switch(y) {
               case 1:{
