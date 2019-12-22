@@ -3,11 +3,11 @@ package ua.khpi.oop.kotenko08;
 import java.util.ArrayList;
 
 public class Ticket_office {
-	private String departure_time; // Время отправки
-	private int number_of_seats_available; // Кол-во свободных мест
-	private int the_total_number_of_seats; // Мест всего
-	private String days; // День недели
-	private int number; // Номер рейса
+	private String departure_time; // Р’СЂРµРјСЏ РѕС‚РїСЂР°РІРєРё
+	private int number_of_seats_available; // РљРѕР»-РІРѕ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚
+	private int the_total_number_of_seats; // РњРµСЃС‚ РІСЃРµРіРѕ
+	private String days; // Р”РµРЅСЊ РЅРµРґРµР»Рё
+	private int number; // РќРѕРјРµСЂ СЂРµР№СЃР°
 	private ArrayList<Station> stations;
 	
 //	public Ticket_office(String departure_time,int number_of_seats_available,int the_total_number_of_seats,String days,int number, ArrayList<Station> stations) {
@@ -65,17 +65,17 @@ public class Ticket_office {
 	
 	public void print() {
 		System.out.println();
-		System.out.println("Маршрут:");
+		System.out.println("РњР°СЂС€СЂСѓС‚:");
 		for(Station a : stations) {
-			System.out.println("Название станции: " + a.get_station_name());
+			System.out.println("РќР°Р·РІР°РЅРёРµ СЃС‚Р°РЅС†РёРё: " + a.get_station_name());
 			System.out.println();
-			System.out.println("Время отправки: " + a.get_arrival_time());
+			System.out.println("Р’СЂРµРјСЏ РѕС‚РїСЂР°РІРєРё: " + a.get_arrival_time());
 		}
-		System.out.printf("Номер рейса: " + this.number + '\n'
-				+ "День недели: " + this.days + '\n'
-				+ "Время отправки: " + this.departure_time + '\n'
-				+ "Всего мест: " + this.the_total_number_of_seats + '\n'
-				+ "Количество свободных мест: " + this.number_of_seats_available);
+		System.out.printf("РќРѕРјРµСЂ СЂРµР№СЃР°: " + this.number + '\n'
+				+ "Р”РµРЅСЊ РЅРµРґРµР»Рё: " + this.days + '\n'
+				+ "Р’СЂРµРјСЏ РѕС‚РїСЂР°РІРєРё: " + this.departure_time + '\n'
+				+ "Р’СЃРµРіРѕ РјРµСЃС‚: " + this.the_total_number_of_seats + '\n'
+				+ "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚: " + this.number_of_seats_available);
 	}
 
 	public ArrayList<Station> getStations() {
