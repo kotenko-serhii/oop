@@ -18,15 +18,15 @@ public class Files {
 
 	public static String chooseFile(File[] list) {
 		 printListOfFiles(list);
-		 System.out.println("Выберите подкаталог или файл:");
+		 System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РїРѕРґРєР°С‚Р°Р»РѕРі РёР»Рё С„Р°Р№Р»:");
 		 @SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		 int index = in.nextInt();
 		 try {
 			 return new String(list[index-1].getAbsolutePath());
 		 }catch(ArrayIndexOutOfBoundsException e) {
-			 System.out.println("Значение вне массива!");
-			 return "C:\\Users\\Сергей\\eclipse-workspace\\kotenko-serhii";
+			 System.out.println("Р—РЅР°С‡РµРЅРёРµ РІРЅРµ РјР°СЃСЃРёРІР°!");
+			 return "C:\\Users\\РЎРµСЂРіРµР№\\eclipse-workspace\\kotenko-serhii";
 		 }
 	}
 
