@@ -5,13 +5,13 @@ interface Printable {
 }
 
 public class Ticket_office {
-	private String station_name; // РќР°Р·РІР°РЅРёРµ СЃС‚Р°РЅС†РёРё
-	private String arrival_time; // Р’СЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ
-	private String departure_time; // Р’СЂРµРјСЏ РѕС‚РїСЂР°РІРєРё
-	private int number_of_seats_available; // РљРѕР»-РІРѕ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚
-	private int the_total_number_of_seats; // РњРµСЃС‚ РІСЃРµРіРѕ
-	private String days; // Р”РµРЅСЊ РЅРµРґРµР»Рё
-	private int number; // РќРѕРјРµСЂ СЂРµР№СЃР°
+	private String station_name; // Название станции
+	private String arrival_time; // Время прибытия
+	private String departure_time; // Время отправки
+	private int number_of_seats_available; // Кол-во свободных мест
+	private int the_total_number_of_seats; // Мест всего
+	private String days; // День недели
+	private int number; // Номер рейса
 	
 	public Ticket_office(String station_name, String arrival_time, String departure_time,int number_of_seats_available, int the_total_number_of_seats, String days, int number) {
         this.station_name = station_name;
